@@ -6,7 +6,7 @@ public class Empresa
 
     public Empresa()
     {
-        _funcionarios = new List<Empleado>(); // es una rleación de N
+        _funcionarios = new List<Empleado>(); // es una releación de N
         NombreEmpresa= "Nombre de la empresa";
         RUT = "el RUT";
     }
