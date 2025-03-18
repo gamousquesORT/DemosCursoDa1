@@ -2,7 +2,7 @@ namespace ClasesRoles;
 
 public class Empleado
 {
-    private Empresa? _empleador;
+    private Empresa? _empleador; //atributo para implementar la relación
 
     public Empleado(Empresa empleador)
     {
@@ -15,6 +15,5 @@ public class Empleado
     public string Nombre { get; set; }
     public string Apellido { get; set; }
     public string CI { get; set; }
-    public Empresa Empleador {set => _empleador=value; }
-    
+    public Empresa Empleador {set => _empleador = value;}
 }
