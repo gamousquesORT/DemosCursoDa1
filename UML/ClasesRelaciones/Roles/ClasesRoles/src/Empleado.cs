@@ -15,5 +15,9 @@ public class Empleado
     public string Nombre { get; set; }
     public string Apellido { get; set; }
     public string CI { get; set; }
-    public Empresa Empleador {set => _empleador = value;}
+    public Empresa Empleador
+    {
+        get => _empleador;
+        set => _empleador = value;
+    }
 }
