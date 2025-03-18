@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogEntryApp", "BlogEntryAp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryCapitalDemo", "CountryCapitalDemo\CountryCapitalDemo.csproj", "{479022A9-A8AD-42EB-B8C6-8CB0132AD76C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesRoles", "Roles\ClasesRoles\ClasesRoles.csproj", "{72A2ED1C-6DA3-41F7-BDB9-1061321DE562}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{479022A9-A8AD-42EB-B8C6-8CB0132AD76C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{479022A9-A8AD-42EB-B8C6-8CB0132AD76C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{479022A9-A8AD-42EB-B8C6-8CB0132AD76C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72A2ED1C-6DA3-41F7-BDB9-1061321DE562}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72A2ED1C-6DA3-41F7-BDB9-1061321DE562}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72A2ED1C-6DA3-41F7-BDB9-1061321DE562}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72A2ED1C-6DA3-41F7-BDB9-1061321DE562}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
