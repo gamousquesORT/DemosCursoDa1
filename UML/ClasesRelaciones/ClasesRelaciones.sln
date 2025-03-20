@@ -8,7 +8,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomerApp", "CustomerApp\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlogEntryApp", "BlogEntryApp\BlogEntryApp.csproj", "{59B43A70-8716-4D3D-9791-368FCE9AC83B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryCapitalDemo", "CountryCapitalDemo\CountryCapitalDemo.csproj", "{479022A9-A8AD-42EB-B8C6-8CB0132AD76C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CountryCapitalThisDelegationDemo", "CountryCapitalThisDelegationDemo\CountryCapitalThisDelegationDemo.csproj", "{479022A9-A8AD-42EB-B8C6-8CB0132AD76C}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClasesRoles", "Roles\ClasesRoles\ClasesRoles.csproj", "{72A2ED1C-6DA3-41F7-BDB9-1061321DE562}"
 EndProject
