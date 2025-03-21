@@ -12,5 +12,5 @@ try
     Console.WriteLine($"Country: {country.Name}");
     Console.WriteLine($"Capital: {country.Capital.Name}");
 } catch(NullReferenceException) {
-    Console.WriteLine("Country or Capital is null");
+    Console.WriteLine("País o Capital es nulo");
 }
