@@ -5,7 +5,7 @@ public class Reviewer
     private readonly List<BlogEntry> _blogEntries = new List<BlogEntry>();
     private int _reviewerId;
 
-    // la multiplicidad es?
+    // la cardinalidad es?
 
     public Reviewer(string reviwerName)
     {

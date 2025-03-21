@@ -1,17 +1,17 @@
-﻿namespace ejemplosClase;
+﻿namespace CapitalCountryThisDelegationDemo;
 
 public class Country
 {
+    private Capital _capital;
     public Country(string countryName, string capitalName)
     {
         Name = countryName;
         // Ateneción al parámetro this
-        Capital = new Capital(this, capitalName);
+        _capital = new Capital(this, capitalName);
     }
 
     public string Name { get; }
 
-    public string CapitalName => Capital.Name;
+    public string CapitalName => _capital.Name;
 
-    public Capital Capital { get; }
 }

@@ -1,16 +1,22 @@
 ﻿using System;
+namespace CapitalCountryThisDelegationDemo;
 
-namespace ejemplosClase;
-
-internal class Program
+public class Program
 {
     private static void Main(string[] args)
     {
-        var uy = new Country("Uruguay", "Montevideo");
-        Console.WriteLine("preguntando al pais los datos --> Pais: {0} Capital {1} ", uy.Name, uy.CapitalName);
+        try
+        {
+            var uy = new Country("Uruguay", "Montevideo");
 
-        //Pedimos al pais su capital
-        var capital = uy.Capital;
-        Console.WriteLine("Capital {0} ", capital.Name);
+            Console.WriteLine($"\nPreguntando al pais sus datos --> Pais: {uy.Name}\n");
+
+            //Le podemos pedir al pais su capital
+            Console.WriteLine($"Capital {uy.CapitalName} ");
+        }
+        catch (NullReferenceException ex)
+        {
+            Console.WriteLine($"Upps algo salió mal:{ex.Message}");
+        }
     }
 }

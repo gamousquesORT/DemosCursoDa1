@@ -1,4 +1,4 @@
-﻿namespace ejemplosClase;
+﻿namespace CapitalCountryThisDelegationDemo;
 
 public class Capital
 {
