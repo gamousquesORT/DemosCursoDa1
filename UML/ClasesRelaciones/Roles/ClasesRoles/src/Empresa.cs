@@ -17,6 +17,8 @@ public class Empresa
     public void AgregarEmpleado(Empleado employee)
     {
         _funcionarios.Add(employee);
+        
+        // si se quiere que la relación sea unidireccional la siguiente línea no va
         employee.Empleador = this;
     }
 

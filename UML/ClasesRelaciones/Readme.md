@@ -85,10 +85,26 @@ En esta solución se encuentran los siguientes proyectos:
 **[BlogEntryApp](BlogEntryApp/src)** - muestra la implementación de asociación direccional (1 a *) entre clases  
 ![BlogEntryReviewRel](./imagenes/BlogEntryReviewRel.png)
 
-**CountryCapital** - muestra un ejemplo de implementación de asociación bi direccional (1 a 1) entre clases
+**CountryCapitalThisDelegationDemo** - muestra un ejemplo de implementación de asociación bidireccional (1 a 1) entre clases
 ![CountryCapital](./imagenes/CountryCapital.png)
 
-**[Roles](Roles/ClasesRoles/src)** - muestra un ejemplo de implementación de una asociacion de 1 a N entre empresa y Empleado 
+**CountryCapitalRelationship** muestra como __NO__ es recomendable implementar asociaciones debido que crea acoplamiento inncesario
+
+**[Roles](Roles/ClasesRoles/src)** - muestra un ejemplo de implementación de una asociacion bi direccional, de 1 a N entre empresa y Empleado 
 usando los nombres de Rol como atributos. También muestra en el program como se establece la relación.
 ![EmpleadoEmpresa](imagenes/RolesRelaciones.png)
 
+Para convertirla en uni-direccional se debe eliminar el atributo _empleador en la clase Empleado 
+y eliminar la linea de código que asigna el empleador en la clase Empresa. 
+
+```
+
+public void AgregarEmpleado(Empleado employee)
+{
+        _funcionarios.Add(employee);
+
+        // si se quiere que la relación sea unidireccional la siguiente línea no va
+        employee.Empleador = this;
+}
+
+```
