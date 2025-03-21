@@ -17,7 +17,7 @@ public class Capital
         {
             if (_country != null) 
                 return _country.Name; 
-            throw new NullReferenceException();
+            throw new NullReferenceException("El país es nulo");
         }
     }
 
@@ -27,7 +27,7 @@ public class Capital
         {
             if (_country != null) 
                 return _country; 
-            throw new NullReferenceException();
+            throw new NullReferenceException("El país es nulo");
         }
         set => _country = value;
     }

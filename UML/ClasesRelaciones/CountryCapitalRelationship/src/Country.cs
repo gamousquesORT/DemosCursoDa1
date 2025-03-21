@@ -12,13 +12,13 @@ public class Country
     {
         get
         {
-            if (_capital != null) return _capital; else throw new NullReferenceException();
+            if (_capital != null) return _capital; else throw new NullReferenceException("La capital es nula");
         }
         set => _capital = value;
     }
 
     public string Name { get; }
 
-    public string CapitalName => Capital.Name ?? throw new NullReferenceException();
+    public string CapitalName => Capital.Name ?? throw new NullReferenceException("La capital es nula");
     
 }
