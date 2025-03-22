@@ -19,7 +19,7 @@ public class Docente : PersonaUniversidad
         get => _fechaIngreso;
     }
     
-    public string ObtenerDatos()
+    public  string ObtenerDatos()
     {
         return string.Format($"Numero:{this.Numero} - Nombre {this.Nombre} - Clase Docente: {this.GetType()}");
     }

@@ -9,7 +9,7 @@ public class Alumno : PersonaUniversidad
         _carreras = new List<Carrera>();
     }
     
-    public Alumno(string nombreApellido, int numeroPersona) : base(nombreApellido, numeroPersona)
+    public Alumno(string nombreApellido, int numeroPersona)
     {
         _carreras = new List<Carrera>();
     }

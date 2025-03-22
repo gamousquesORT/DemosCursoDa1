@@ -30,7 +30,7 @@ public class PersonaUniversidad
         set => _numeroPersona = value;
     }
     
-    public string ObtenerDatos()
+    public  string ObtenerDatos()
     {
         return string.Format($"Numero:{this._numeroPersona} - Nombre {this._nombreApellido} - Clase PersonaUniversidad: {this.GetType()}");
     }

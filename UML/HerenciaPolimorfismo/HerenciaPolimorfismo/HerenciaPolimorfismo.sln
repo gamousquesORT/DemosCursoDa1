@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaEstudiante", "PersonaEstudiante\PersonaEstudiante\PersonaEstudiante.csproj", "{9EF074AA-7413-4950-AE37-D5E1A4D10F64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehicleInheritance", "VehicleInheritance\VehicleInheritance.csproj", "{1DCA42D7-34EE-415A-AA3D-C98EEEFF5E89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdenConstruccion", "OrdenConstruccion\OrdenConstruccion.csproj", "{575273F6-18E3-4CBC-A1D4-A4CFCCBB13B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{9EF074AA-7413-4950-AE37-D5E1A4D10F64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9EF074AA-7413-4950-AE37-D5E1A4D10F64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9EF074AA-7413-4950-AE37-D5E1A4D10F64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DCA42D7-34EE-415A-AA3D-C98EEEFF5E89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DCA42D7-34EE-415A-AA3D-C98EEEFF5E89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DCA42D7-34EE-415A-AA3D-C98EEEFF5E89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DCA42D7-34EE-415A-AA3D-C98EEEFF5E89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{575273F6-18E3-4CBC-A1D4-A4CFCCBB13B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{575273F6-18E3-4CBC-A1D4-A4CFCCBB13B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{575273F6-18E3-4CBC-A1D4-A4CFCCBB13B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{575273F6-18E3-4CBC-A1D4-A4CFCCBB13B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
