@@ -1,4 +1,4 @@
-﻿using HerenciaPersona;
+﻿using RecorrerPolimorficamente;
 
 Console.WriteLine("Llamada a ObtenerDatos para crear la lista de PersonasUniversidad\n");
 foreach(PersonaUniversidad p in LoadData())

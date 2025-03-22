@@ -30,13 +30,13 @@ public class PersonaUniversidad
         set => _numeroPersona = value;
     }
     
-    public  string ObtenerDatos()
+    public virtual string ObtenerDatos()
     {
-        return string.Format($"Numero:{this._numeroPersona} - Nombre {this._nombreApellido} - Clase PersonaUniversidad: {this.GetType()}");
+        return string.Format($"Numero:{this._numeroPersona} - Nombre {this._nombreApellido} -> Clase PersonaUniversidad: {this.GetType()}");
     }
     
     public override string ToString()
     {
-        return string.Format($"Numero:{this._numeroPersona} Nombre {this._nombreApellido} - PersonaUniversidad: {this.GetType()}");
+        return string.Format($"Numero:{this._numeroPersona} Nombre {this._nombreApellido}");
     }
 }

@@ -19,14 +19,14 @@ public class Docente : PersonaUniversidad
         get => _fechaIngreso;
     }
     
-    public  string ObtenerDatos()
+    public override string ObtenerDatos()
     {
-        return string.Format($"Numero:{this.Numero} - Nombre {this.Nombre} - Clase Docente: {this.GetType()}");
+        return string.Format($"Numero:{this.Numero} - Nombre {this.Nombre} -> Clase Docente: {this.GetType()}");
     }
     
     public override string ToString()
     {
-        return string.Format($"Numero:{this.Numero} Nombre {this.Nombre} - Clase Docente: {this.GetType()}");
+        return string.Format($"Numero:{this.Numero} Nombre {this.Nombre}");
     }
 
 }
