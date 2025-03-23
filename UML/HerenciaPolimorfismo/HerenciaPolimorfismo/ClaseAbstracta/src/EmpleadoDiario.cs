@@ -4,7 +4,7 @@ public class EmpleadoDiario : Empleado
 {
     public decimal SalarioDiario { get; set; }
     
-    public override void ImrimirDescripcion()
+    public override void ImprimirDescripcion()
     {
         Console.WriteLine($"Número de Empleado: {NumeroEmpleado}");
     }

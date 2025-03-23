@@ -3,7 +3,7 @@ namespace ClaseAbstracta;
 public abstract class Persona
 {
     public string? Nombre { get; set; }
-    public abstract void ImrimirDescripcion();
+    public abstract void ImprimirDescripcion();
     public virtual void ImprimirNombre()
     {
         Console.WriteLine($"Nombre: {Nombre}");

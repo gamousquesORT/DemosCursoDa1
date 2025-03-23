@@ -11,7 +11,7 @@ var empleado = new Empleado();
 empleado.Nombre = "Romina";
 empleado.NumeroEmpleado = "123";
 empleado.ImprimirNombre();
-empleado.ImrimirDescripcion();
+empleado.ImprimirDescripcion();
 empleado.MetodoSinEnlaceDinamico();
 
 Console.WriteLine("--------------------------------------------------\n");
@@ -20,7 +20,7 @@ var empleadoMensual = new EmpleadoMensual();
 empleadoMensual.Nombre = "Ramiro";
 empleadoMensual.NumeroEmpleado = "456";
 empleadoMensual.ImprimirNombre();
-empleadoMensual.ImrimirDescripcion();
+empleadoMensual.ImprimirDescripcion();
 empleadoMensual.MetodoSinEnlaceDinamico();
 Console.WriteLine("--------------------------------------------------\n");
 
@@ -29,7 +29,7 @@ var empleadoDiario = new EmpleadoDiario();
 empleadoDiario.Nombre = "Raquel";
 empleadoDiario.NumeroEmpleado = "789";
 empleadoDiario.ImprimirNombre();
-empleadoDiario.ImrimirDescripcion();
+empleadoDiario.ImprimirDescripcion();
 empleadoDiario.MetodoSinEnlaceDinamico();
 
 Console.WriteLine("--------------------------------------------------\n");

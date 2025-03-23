@@ -9,6 +9,10 @@ public class CalculadoraBasica : ICalculadora
 
     public double Dividir(double dividendo, double divisor)
     {
+        if (divisor == 0)
+        {
+            throw new DivideByZeroException();
+        }
         return dividendo / divisor;
     }
   
