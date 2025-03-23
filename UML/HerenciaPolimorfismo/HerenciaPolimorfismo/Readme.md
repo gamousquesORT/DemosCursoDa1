@@ -59,13 +59,23 @@ Los siguientes dos ejemplos muestran el uso de interfaces y polimorfismo.
 Es importante notar que en uno de los ejemplos ShapesUsingInheritance no es posible (conceptualmente)
 hacer que el Toy herede de la clase Shape. Por eso se utiliza una interfaz en el ejemplo ShapesUsingInterface.
 
+**ICalculadora**
+Muestra una interfaz que es implementada por dos clases, Calculadora y CalculadoraCientifica.
+En el main se muestra cómo se pueden crear objetos de cada tipo y cómo se los puede tratar polimórficamente.
 
-**ShapeUsingInterface**
+[Código fuente](Interfaz/src)
+
+![Interfaz](imagenes/Interfaz.png)
+
+![Notación Lollypop](imagenes/Lollypop.png)
+
+
+**Otro Ejemplo ShapeUsingInterface**
 Este ejemplo muestra la utilización de una interfaz IDrawingElement y cómo las clases Circle, Rectangle y Toy la implementan.
 Vea cómo se crean los objetos de cada tipo y cómo se los trata polimórficamente cuando se los
 agrega a una lista de IDrawingElement.  __El Toy__ que no es una figura geométrica igual puede ser dibujado.
 
-[Código fuente](./ShapesUsingInterface)
+[Código fuente](ShapesInterfacee)
 
 Diagrama de clases correspondiente:
 
@@ -75,10 +85,6 @@ Tener en cuenta que este otro diagrama también muestra la interfaz, pero en for
 
 ![Lollypop](imagenes/InterfaceLollypop.png)
 
-**ShapeUsingInheritance**
-Finalmente, este ejemplo muestra el mismo concepto pero utilizando herencia. Es importante ver que, en este caso, el Toy no se podría agregar a la lista de Shapes.
-
-[Código fuente](./ShapesUsingInheritance)
 
 ## Colabore para mejorar ##
 Si encuentra algún error, falta ortografica o tiene alguna sugerencia, por favor, hágamelo saber ingresando un issue [Issues](https://github.com/gamousquesORT/DemosDA1/issues).
