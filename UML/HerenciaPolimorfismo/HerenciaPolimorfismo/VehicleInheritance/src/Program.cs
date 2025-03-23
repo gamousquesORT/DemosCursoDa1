@@ -1,4 +1,7 @@
-﻿
+﻿/*
+ * Revise las salidas por consola y verifique por qué se obtienen esos resultos correctos para
+ * el toyotaCar y el hondaMotorcycle, e incorrectos para vheicleOne y vehicleTwo?
+ */
 using VehicleInheritance;
 
 // notar las distintas formas de llamar a los constructores

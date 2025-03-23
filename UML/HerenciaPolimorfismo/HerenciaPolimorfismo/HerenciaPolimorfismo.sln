@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrdenConstruccion", "OrdenC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecorrerPolimorficamente", "RecorrerPolimorficamente\RecorrerPolimorficamente.csproj", "{A5420FEB-F1DD-4A0F-951F-7AE3FC0BFB89}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClaseAbstracta", "ClaseAbstracta\ClaseAbstracta.csproj", "{75B013AD-786E-4CAA-946E-E4671AE3D506}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{A5420FEB-F1DD-4A0F-951F-7AE3FC0BFB89}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A5420FEB-F1DD-4A0F-951F-7AE3FC0BFB89}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A5420FEB-F1DD-4A0F-951F-7AE3FC0BFB89}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75B013AD-786E-4CAA-946E-E4671AE3D506}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75B013AD-786E-4CAA-946E-E4671AE3D506}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75B013AD-786E-4CAA-946E-E4671AE3D506}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75B013AD-786E-4CAA-946E-E4671AE3D506}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

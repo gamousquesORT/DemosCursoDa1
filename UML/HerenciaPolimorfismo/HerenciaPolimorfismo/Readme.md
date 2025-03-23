@@ -1,11 +1,11 @@
 ## UML - Herencia, polimorfismo e interfaces
 ### Breve descripción de los siguientes proyectos en la solución:
 
-**OrdenConstrucción**
+**Constructores - Orden de construcción**
 
-Este ejemplo muestra una clase Persona, y una clase Estudiante.
+Este ejemplo muestra una clase Persona, una clase Estudiante y la relación de herencia.
 En el main se muestran la construcción de objetos de cada tipo.
-Revise porqué se inicializan mal los objectos y arregle para que funcione correctamente
+__Revise por qué se inicializan mal__ los objetos y __arregle para que funcione correctamente.__
 
 [Código fuente](OrdenConstruccion/src)
 
@@ -13,23 +13,29 @@ Diagrama de clases correspondiente:
 
 ![Generalización](./imagenes/PersonaEstudiante.png)
 
-**PersonaEstudiante**
+**Enlace estático vs. dinámico**
 
-Este ejemplo presenta  que ayudan a comprender el uso de virtual y override
+Este ejemplo presenta código que ayudan a comprender el uso de virtual y override
 lea el código de main y de las clases Docente, Alumno y PersonaUniversidad.
 
 __Tener en cuenta que el código de Program puede no funcionar bien (ver warnings).
 Hay un problema que es necesario arreglar.
 El mismo se dejó con errores para que Ud. demuestre que comprende la herencia.__
 
-[Código fuente](./RecorrerPersonasPolimorficamente)
+__Tip__ - buscar los métodos con virtual y override en las clases.
+
+[Código fuente](./PersonaEstudiante/PersonaEstudiante/src)
+
+La variante del código ReccorrerPersonas muestra cómo recorrer una lista de Personas y mostrar su información __usando polimorfismo.__
+
+[Código fuente](RecorrerPolimorficamente/src)
 
 Diagrama de clases correspondiente:
 
 ![Recorrer Polimórficamente](imagenes/RecorrerPersonas.png)
 
 **Vehicles**
-Este ejemplo muestra el uso de herencia para representar Vehículos.
+Este ejemplo muestra el uso de herencia para representar Vehículos y utilizar polimorfismo en una lista de vehículos.
 
 __Al igual que los anteriores ejemplos
 revise si funciona correctamente listando la información que el main de la clase Program muestra.__
@@ -39,6 +45,13 @@ revise si funciona correctamente listando la información que el main de la clas
 Diagrama de clases correspondiente:
 
 ![Herencia de Vehiculos](imagenes/Vehicles.png)
+
+**Clase Abstracta**
+Este ejemplo muestra como declarar una clase abstracta en C# 
+
+[Código fuente](ClaseAbstracta/src)
+
+![Clase Abstracta](imagenes/ClaseAbstracta.png)
 ___
 
 ## Interfaces vs. Herencia

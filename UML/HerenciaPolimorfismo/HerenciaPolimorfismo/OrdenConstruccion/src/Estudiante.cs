@@ -1,4 +1,4 @@
-namespace OrdenConstruccion;
+namespace ClaseAbstracta;
 
 public class Estudiante : Persona
 {   
