@@ -19,7 +19,8 @@ public class Docente : PersonaUniversidad
         get => _fechaIngreso;
     }
     
-    public  string ObtenerDatos()
+    // Probar el método sin la palabra clave override y ver el comportamiento
+    public override string ObtenerDatos()
     {
         return string.Format($"Numero:{this.Numero} - Nombre {this.Nombre} - Clase Docente: {this.GetType()}");
     }

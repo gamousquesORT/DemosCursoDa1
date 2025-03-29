@@ -30,7 +30,8 @@ public class PersonaUniversidad
         set => _numeroPersona = value;
     }
     
-    public  string ObtenerDatos()
+    // Probar el método sin la palabra clave virtual y ver el comportamiento
+    public virtual string ObtenerDatos()
     {
         return string.Format($"Numero:{this._numeroPersona} - Nombre {this._nombreApellido} - Clase PersonaUniversidad: {this.GetType()}");
     }

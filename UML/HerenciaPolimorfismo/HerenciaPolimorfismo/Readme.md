@@ -86,5 +86,5 @@ Tener en cuenta que este otro diagrama también muestra la interfaz, pero en for
 ![Lollypop](imagenes/InterfaceLollypop.png)
 
 
-## Colabore para mejorar ##
-Si encuentra algún error, falta ortografica o tiene alguna sugerencia, por favor, hágamelo saber ingresando un issue [Issues](https://github.com/gamousquesORT/DemosDA1/issues).
+### Colabore para mejorar ###
+Si encuentra algún error, falta ortográfica o tiene alguna sugerencia, por favor, hágamelo saber ingresando un issue [Issues](https://github.com/gamousquesORT/DemosDA1/issues).

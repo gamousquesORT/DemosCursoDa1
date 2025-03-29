@@ -9,9 +9,10 @@ public class Alumno : PersonaUniversidad
         _carreras = new List<Carrera>();
     }
     
-    public Alumno(string nombreApellido, int numeroPersona)
+    // Notar el base para invocar el constructor de la clase base
+    public Alumno(string nombreApellido, int numeroPersona) : base(nombreApellido, numeroPersona)
     {
-        _carreras = new List<Carrera>();
+        this._carreras = new List<Carrera>();
     }
     
     public override string ToString()

@@ -93,7 +93,6 @@ En esta solución se encuentran los siguientes proyectos:
 **[Roles](Roles/ClasesRoles/src)** - muestra un ejemplo de implementación de una asociacion bi direccional, de 1 a N entre empresa y Empleado 
 usando los nombres de Rol como atributos. También muestra en el program como se establece la relación.
 ![EmpleadoEmpresa](imagenes/RolesRelaciones.png)
-
 Para convertirla en uni-direccional se debe eliminar el atributo _empleador en la clase Empleado 
 y eliminar la linea de código que asigna el empleador en la clase Empresa. 
 
@@ -108,3 +107,7 @@ public void AgregarEmpleado(Empleado employee)
 }
 
 ```
+
+
+### Colabore para mejorar ###
+Si encuentra algún error, falta ortográfica o tiene alguna sugerencia, por favor, hágamelo saber ingresando un issue [Issues](https://github.com/gamousquesORT/DemosDA1/issues).
