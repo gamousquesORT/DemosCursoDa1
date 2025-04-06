@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepoApp", "src\DepoApp\DepoApp.csproj", "{F2E3CA61-A86B-460D-BBCE-9AE8AFF4ED92}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DepoAppTests", "DepoAppTests\DepoAppTests.csproj", "{F6193B3E-28F1-4F50-98CB-F936A2DA64BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F2E3CA61-A86B-460D-BBCE-9AE8AFF4ED92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F2E3CA61-A86B-460D-BBCE-9AE8AFF4ED92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F2E3CA61-A86B-460D-BBCE-9AE8AFF4ED92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F2E3CA61-A86B-460D-BBCE-9AE8AFF4ED92}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F6193B3E-28F1-4F50-98CB-F936A2DA64BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F6193B3E-28F1-4F50-98CB-F936A2DA64BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F6193B3E-28F1-4F50-98CB-F936A2DA64BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F6193B3E-28F1-4F50-98CB-F936A2DA64BE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
