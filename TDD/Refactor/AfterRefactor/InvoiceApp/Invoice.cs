@@ -1,69 +1,75 @@
 ﻿namespace InvoiceApp;
 
-public class Invoice                         // → Rename Class
+public class Invoice                         
 {
-    private double _price;
-    private double _quantity;
-    private const double DEFAULT_TAX_RATE = 1.2;
+    private const decimal MIN_VALID_PRICE = 0;
+    private const decimal MIN_VALID_QTY = 0;
+    private const decimal DEFAULT_TAX_RATE = 1.2m;
+    private decimal _price;
+    private decimal _quantity;
 
-    public Invoice() : this(0.0, 0.0) // → Constructor Chaining
+
+    public Invoice() : this(0.0m, 0.0m) // → Constructor Chaining
     {
     }
     
-    public Invoice(double price, double quantity)
+    public Invoice(decimal price, decimal quantity)
     {
-        if (price < 0 || quantity < 0) // → Extract Method
-        {
-            throw new ArgumentException("Price and quantity must be greater than zero.");
-        }
-        
-        _price = price;
-        _quantity = quantity;
+        ValidateAndSetPrice(price);
+        ValidateAndSetQuantity(quantity);
     }
-
-    public double Price
+    
+    public decimal Price
     {
         get => _price;
-        set
-        {
-            if (value < 0)
-            {
-                throw new ArgumentException("Price must be greater than zero.");
-            }
-            else
-            {
-                _price = value;
-            }
-        }
+        set { ValidateAndSetPrice(value); }
     }
 
-    public double Quantity
+    private void ValidateAndSetPrice(decimal value)
+    {
+        if (ValidatePrice(value))
+        {
+            throw new ArgumentException("Price must be greater than zero.");
+        }
+
+        _price = value;
+    }
+
+
+    public decimal Quantity
     {
         get => _quantity;
-        set
-        {
-            if (value < 0)
-            {
-                throw new ArgumentException("Price must be greater than zero.");
-            }
-            else
-            {
-                _quantity = value;
-            }
-        }
+        set { ValidateAndSetQuantity(value); }
     }
 
-    public double Calculate()
+    private void ValidateAndSetQuantity(decimal value)
     {
-        if (Price < 0 || Quantity < 0) // → Extract Method
+        if (ValidateQuantity(value))
         {
-            throw new ArgumentException("Price and quantity must be greater than zero.");
+            throw new ArgumentException("Quantity must be greater than zero.");
         }
+
+        _quantity = value;
+    }
+
+    public decimal Calculate()
+    {
         return CalculatBaseTotal() * DEFAULT_TAX_RATE;       // → 1. Extract Field (magic number)
     }
 
-    private double CalculatBaseTotal()
+    private decimal CalculatBaseTotal()
     {
         return Price * Quantity;
     }
+    
+    private static bool ValidatePrice(decimal value)
+    {
+        return value < MIN_VALID_PRICE;
+    }
+    
+    private static bool ValidateQuantity(decimal value)
+    {
+        return value < MIN_VALID_QTY;
+    }
+    
 }
