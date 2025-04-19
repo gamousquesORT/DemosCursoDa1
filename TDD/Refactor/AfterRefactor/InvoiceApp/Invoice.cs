@@ -71,6 +71,4 @@ public class Invoice
     {
         return Price * Quantity;
     }
-    
-
 }
