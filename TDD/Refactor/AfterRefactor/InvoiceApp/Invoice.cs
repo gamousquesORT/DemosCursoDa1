@@ -6,6 +6,12 @@ public class Invoice                         // → Rename Class
     private double _quantity;
     private const double DEFAULT_TAX_RATE = 1.2;
 
+    public Invoice(double price, double quantity)
+    {
+        _price = price;
+        _quantity = quantity;
+    }
+
     public double Price
     {
         get => _price;
