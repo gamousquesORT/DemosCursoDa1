@@ -6,8 +6,17 @@ public class Invoice                         // → Rename Class
     private double _quantity;
     private const double DEFAULT_TAX_RATE = 1.2;
 
+    public Invoice() : this(0.0, 0.0) // → Constructor Chaining
+    {
+    }
+    
     public Invoice(double price, double quantity)
     {
+        if (price < 0 || quantity < 0) // → Extract Method
+        {
+            throw new ArgumentException("Price and quantity must be greater than zero.");
+        }
+        
         _price = price;
         _quantity = quantity;
     }
@@ -24,10 +33,8 @@ public class Invoice                         // → Rename Class
         set => _quantity = value;
     }
 
-    public double Calculate(double price, double quantity)
+    public double Calculate()
     {
-        Price = price;
-        Quantity = quantity;
         if (Price < 0 || Quantity < 0) // → Extract Method
         {
             throw new ArgumentException("Price and quantity must be greater than zero.");

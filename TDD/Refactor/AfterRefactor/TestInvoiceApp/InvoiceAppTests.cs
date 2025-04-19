@@ -6,15 +6,36 @@ namespace TestInvoiceApp;
 public class InvoiceAppTests
 {
     [TestMethod]
+    public void ShouldCreateInvoiceGivenPositiveQuantityAndPrice()
+    {
+        // Arrange
+        Invoice invoice = new Invoice(100.0, 2.0);
+        double expectedPrice = 240.0;
+        
+        double actual = invoice.Calculate();
+        
+        Assert.AreEqual(expectedPrice, actual, 0.0001);
+    }
+    
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentException))]
+    public void ShouldThrowArgumentExceptionGivenANegativeQuantityArgument()
+    {
+        // Arrange
+        Invoice invoice = new Invoice(100.0, -2.0);
+
+    }
+
+    [TestMethod]
     public void ShouldRetuenExpectedTotalGivenPositiveWholeNumbers()
     {
         // Arrange
         double price    = 100.0;
         double quantity = 2.0;
         double expected = price * quantity * 1.2; // 240
-        Invoice invoice = new Invoice();
+        Invoice invoice = new Invoice(price, quantity);
         // Act
-        double actual = invoice.Calculate(price, quantity);
+        double actual = invoice.Calculate();
 
         // Assert
         Assert.AreEqual(expected, actual, 0.0001);
@@ -29,8 +50,8 @@ public class InvoiceAppTests
         double expected = price * quantity * 1.2; // 37.8
 
         // Act
-        Invoice invoice = new Invoice();
-        double actual = invoice.Calculate(price, quantity);
+        Invoice invoice = new Invoice(price, quantity);
+        double actual = invoice.Calculate();
 
         // Assert
         Assert.AreEqual(expected, actual, 0.0001);
@@ -43,10 +64,10 @@ public class InvoiceAppTests
         double price    = 0;
         double quantity = 3.0;
         double expected = 0;
-        Invoice invoice = new Invoice();
+        Invoice invoice = new Invoice(price, quantity);
         
         // Assert
-        Assert.AreEqual(expected, invoice.Calculate(price, quantity), 0.0001);
+        Assert.AreEqual(expected, invoice.Calculate(), 0.0001);
     }
 
     [TestMethod]
@@ -56,22 +77,20 @@ public class InvoiceAppTests
         double price    = 4.0;
         double quantity = 0;
         double expected = 0;
-        Invoice invoice = new Invoice();
+        Invoice invoice = new Invoice(price, quantity);
         
         // Assert
-        Assert.AreEqual(expected, invoice.Calculate(price, quantity), 0.0001);
+        Assert.AreEqual(expected, invoice.Calculate(), 0.0001);
     }
     
     [TestMethod]
     public void ShouldReturnZeroGivenZeroBothQuantityAndPrice()
     {
         // Act
-        double price    = 0;
-        double quantity = 0;
         Invoice invoice = new Invoice();
         
         // Assert
-        Assert.AreEqual(0.0, invoice.Calculate(price, quantity), 0.0001);
+        Assert.AreEqual(0.0, invoice.Calculate(), 0.0001);
     }
     
     [TestMethod]
@@ -82,9 +101,9 @@ public class InvoiceAppTests
         double price    = 34;
         double quantity = -1;
 
-        Invoice invoice = new Invoice();
+        Invoice invoice = new Invoice(price, quantity);
         
-        invoice.Calculate(price, quantity);
+        invoice.Calculate();
     }
     
     [TestMethod]
@@ -95,9 +114,9 @@ public class InvoiceAppTests
         double price    = -34;
         double quantity = 1;
 
-        Invoice invoice = new Invoice();
+        Invoice invoice = new Invoice(price, quantity);
         
-        invoice.Calculate(price, quantity);
+        invoice.Calculate();
     }
     
 }
