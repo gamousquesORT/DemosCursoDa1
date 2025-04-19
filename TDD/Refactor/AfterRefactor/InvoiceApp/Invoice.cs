@@ -2,14 +2,16 @@
 
 public class Invoice                         
 {
-    private const decimal MIN_VALID_PRICE = 0;
-    private const decimal MIN_VALID_QTY = 0;
-    private const decimal DEFAULT_TAX_RATE = 1.2m;
+    private const decimal MinValidPrice = 0;
+    private const decimal MinValidQty = 0;
+    private const decimal DefaultTaxRate = 1.2m;
+    private const string? PriceMustBeGreaterThanZero = "Price must be greater than zero.";
+    private const string? QuantityMustBeGreaterThanZero = "Quantity must be greater than zero.";
     private decimal _price;
     private decimal _quantity;
 
 
-    public Invoice() : this(0.0m, 0.0m) // → Constructor Chaining
+    public Invoice() : this(0.0m, 0.0m) 
     {
     }
     
@@ -22,54 +24,53 @@ public class Invoice
     public decimal Price
     {
         get => _price;
-        set { ValidateAndSetPrice(value); }
+        set => ValidateAndSetPrice(value);
     }
 
     private void ValidateAndSetPrice(decimal value)
     {
         if (ValidatePrice(value))
         {
-            throw new ArgumentException("Price must be greater than zero.");
+            throw new ArgumentException(PriceMustBeGreaterThanZero);
         }
-
         _price = value;
     }
 
-
+    private static bool ValidatePrice(decimal value)
+    {
+        return value < MinValidPrice;
+    }
+    
     public decimal Quantity
     {
         get => _quantity;
-        set { ValidateAndSetQuantity(value); }
+        set => ValidateAndSetQuantity(value);
     }
-
+    
     private void ValidateAndSetQuantity(decimal value)
     {
         if (ValidateQuantity(value))
         {
-            throw new ArgumentException("Quantity must be greater than zero.");
+            throw new ArgumentException(QuantityMustBeGreaterThanZero);
         }
-
         _quantity = value;
-    }
-
-    public decimal Calculate()
-    {
-        return CalculatBaseTotal() * DEFAULT_TAX_RATE;       // → 1. Extract Field (magic number)
-    }
-
-    private decimal CalculatBaseTotal()
-    {
-        return Price * Quantity;
-    }
-    
-    private static bool ValidatePrice(decimal value)
-    {
-        return value < MIN_VALID_PRICE;
     }
     
     private static bool ValidateQuantity(decimal value)
     {
-        return value < MIN_VALID_QTY;
+        return value < MinValidQty;
+    }
+
+
+    public decimal Calculate()
+    {
+        return CalculateBaseTotal() * DefaultTaxRate;  
+    }
+
+    private decimal CalculateBaseTotal()
+    {
+        return Price * Quantity;
     }
     
+
 }
