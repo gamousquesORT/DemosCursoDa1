@@ -26,6 +26,11 @@ public class Invoice                         // → Rename Class
         {
             throw new ArgumentException("Price and quantity must be greater than zero.");
         }
-        return Price * Quantity * DEFAULT_TAX_RATE;       // → 1. Extract Field (magic number)
+        return CalculatBaseTotal() * DEFAULT_TAX_RATE;       // → 1. Extract Field (magic number)
+    }
+
+    private double CalculatBaseTotal()
+    {
+        return Price * Quantity;
     }
 }
