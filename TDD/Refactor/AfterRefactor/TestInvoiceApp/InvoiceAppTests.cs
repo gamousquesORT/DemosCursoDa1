@@ -27,7 +27,29 @@ public class InvoiceAppTests
     }
 
     [TestMethod]
-    public void ShouldRetuenExpectedTotalGivenPositiveWholeNumbers()
+    [ExpectedException(typeof(ArgumentException))]
+    public void ShouldThrowArgumentExceptionCallingNegativePriceProperty()
+    {
+        // Arrange
+        Invoice invoice = new Invoice();
+        // Act
+        invoice.Price = -2.0;
+
+    }
+
+    [TestMethod]
+    [ExpectedException(typeof(ArgumentException))]
+    public void ShouldThrowArgumentExceptionCallingNegativeQuantityProperty()
+    {
+        // Arrange
+        Invoice invoice = new Invoice();
+        // Act
+        invoice.Quantity = -2.0;
+
+    }
+    
+    [TestMethod]
+    public void ShouldReturnExpectedTotalGivenPositiveWholeNumbers()
     {
         // Arrange
         double price    = 100.0;

@@ -24,13 +24,33 @@ public class Invoice                         // → Rename Class
     public double Price
     {
         get => _price;
-        set => _price = value;
+        set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException("Price must be greater than zero.");
+            }
+            else
+            {
+                _price = value;
+            }
+        }
     }
 
     public double Quantity
     {
         get => _quantity;
-        set => _quantity = value;
+        set
+        {
+            if (value < 0)
+            {
+                throw new ArgumentException("Price must be greater than zero.");
+            }
+            else
+            {
+                _quantity = value;
+            }
+        }
     }
 
     public double Calculate()
