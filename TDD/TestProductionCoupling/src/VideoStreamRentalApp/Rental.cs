@@ -4,13 +4,14 @@ public class Rental
 {
     private int _daysRented;
     private string _movie;
-    private VideoTypeRegistry _movieInfo = new VideoTypeRegistry();
-    private const int ChildrenNormalFee = 1;
+
+    private const int LoyaltyPoints = 1;
     private const decimal NormalRentalFee = 1.5m;
     private const int FreeRentalDays = 3;
     private const int ChildrenMovieTotalLoyaltyPoints = 1;
-    private const int LoyaltyPoints = 1;
-       
+    private const int ChildrenNormalFee = 1;
+
+    private VideoTypeRegistry _movieInfo = new VideoTypeRegistry();    
     public Rental(string movie, int rentDays)
     {
         Movie = movie;
