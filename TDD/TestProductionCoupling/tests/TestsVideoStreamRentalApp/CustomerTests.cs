@@ -31,10 +31,8 @@ public class VideoStreamRentalTests
     public void ShouldChargeButNotGivePoints_GivenThreeDayRental()
     {
         c.AddRental("Regular Movie" ,2);
-        AssertFeeAndFidelityPoints(1.5m, 1);
-
         c.AddRental("Regular Movie" ,3);
-        AssertFeeAndFidelityPoints(1.5m, 1);
+        AssertFeeAndFidelityPoints(3m, 2);
     }
     [TestMethod]
     public void ShouldChargeAndGivePoints_GivenFourDaysRental()

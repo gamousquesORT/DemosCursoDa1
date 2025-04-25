@@ -5,54 +5,73 @@ public class Customer
     private const decimal NormalRentalFee = 1.5m;
     private const int FreeRentalDays = 3;
     private const int LoyaltyPoints = 1;
-    private int _daysRented;
-    private string _movie;
     private VideoTypeRegistry _movieInfo = new VideoTypeRegistry();
+    private List<Rental> _rentals = new List<Rental>();
+
+
     public Customer()
     {
-  
+
     }
     public void AddRental(string movie, int daysRented)
-    {   
-        _movie = movie;
-        _daysRented = daysRented;
+    {
+        _rentals.Add(new Rental(movie, daysRented));
     }
 
     public decimal GetRentalFee()
     {
-        if (_movieInfo.IsRegular(_movie))
+        decimal rentalFee = 0;
+        
+        foreach (var rental in _rentals)
         {
-            if (_daysRented > FreeRentalDays)
+            if (_movieInfo.IsRegular(rental.Movie))
             {
-                return CalculateRentalFee();
+                if (rental.DaysRented > FreeRentalDays)
+                {
+                    rentalFee += CalculateRentalFee(rental);
+                }
+                else
+                {
+                    rentalFee += NormalRentalFee;
+                }
             }
-            return NormalRentalFee;       
+            else 
+                rentalFee += 1* rental.DaysRented;  
         }
-
-        return 1*_daysRented;        
+       
+        return rentalFee;
     }
 
-    private decimal CalculateRentalFee()
+    private decimal CalculateRentalFee(Rental rental)
     {
-        return NormalRentalFee + (_daysRented - FreeRentalDays) * NormalRentalFee;
+        return NormalRentalFee + (rental.DaysRented - FreeRentalDays) * NormalRentalFee;
     }
 
     public int GetLoyaltyPoints()
     {
-        if (_movieInfo.IsRegular(_movie))
-        {
-            if (_daysRented > FreeRentalDays)
-            {
-                return CalculateLoyaltyPoints();
-            }
-            return LoyaltyPoints;
-        }
+        int totalLoyaltyPoints = 0;
 
-        return 1;
+        foreach (var rental in _rentals)
+        {
+            if (_movieInfo.IsRegular(rental.Movie))
+            {
+                if (rental.DaysRented > FreeRentalDays)
+                {
+                    totalLoyaltyPoints += CalculateLoyaltyPoints(rental);
+                }
+                else
+                {
+                    totalLoyaltyPoints += LoyaltyPoints;
+                }
+            } 
+            else
+                totalLoyaltyPoints += 1;
+        }
+        return totalLoyaltyPoints;       
     }
 
-    private int CalculateLoyaltyPoints()
+    private int CalculateLoyaltyPoints(Rental rental)
     {
-        return LoyaltyPoints + (_daysRented - FreeRentalDays);
+        return LoyaltyPoints + (rental.DaysRented - FreeRentalDays);
     }
 }
