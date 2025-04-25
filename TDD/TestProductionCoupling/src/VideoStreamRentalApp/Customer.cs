@@ -6,18 +6,25 @@ public class Customer
     private const int FreeRentalDays = 3;
     private const int LoyaltyPoints = 1;
     private int _daysRented;
+    private string _movie;
     
     public void AddRental(string movie, int daysRented)
-    {
+    {   
+        _movie = movie;
         _daysRented = daysRented;
     }
     public decimal GetRentalFee()
     {
-        if (_daysRented > FreeRentalDays)
+        if (_movie.Equals("Regular Movie"))
         {
-            return CalculateRentalFee();
+            if (_daysRented > FreeRentalDays)
+            {
+                return CalculateRentalFee();
+            }
+            return NormalRentalFee;       
         }
-        return NormalRentalFee;        
+
+        return 1;        
     }
 
     private decimal CalculateRentalFee()
