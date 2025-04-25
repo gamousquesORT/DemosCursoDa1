@@ -19,7 +19,7 @@ public class Customer
 
         foreach (var rental in _rentals)
         {
-            rentalFee += rental.GetRentalFee();
+            rentalFee += rental.GetFee();
 
         }
 

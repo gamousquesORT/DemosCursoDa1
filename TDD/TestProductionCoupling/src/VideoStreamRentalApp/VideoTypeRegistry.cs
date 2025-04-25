@@ -6,18 +6,27 @@ public class VideoTypeRegistry
     {
         Regular,
         Children,
-    }; 
+    };
 
-    private Dictionary<string, MovieType> _movieInfo = new Dictionary<string, MovieType>();
+    private static Dictionary<string, MovieType> _movieInfo = new Dictionary<string, MovieType>();
 
-    public VideoTypeRegistry()
+    static VideoTypeRegistry()
     {
-        _movieInfo.Add("Regular Movie", MovieType.Regular);
-        _movieInfo.Add("Children Movie", MovieType.Children);       
+        _movieInfo.Add("Regular Title", MovieType.Regular);
+        _movieInfo.Add("Children Title", MovieType.Children);
     }
-    
-    public bool IsRegular(string movie)
+
+
+    public static Movie GetMovie(string movie)
     {
-        return _movieInfo[movie] == MovieType.Regular;       
+        switch (_movieInfo[movie])
+        {
+            case MovieType.Regular:
+                return new RegularMovie(movie);
+            case MovieType.Children:
+                return new ChildrenMovie(movie);
+            default:
+                return null;
+        }
     }
 }
