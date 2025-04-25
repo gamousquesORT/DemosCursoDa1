@@ -13,3 +13,8 @@ Aquí se muestra cómo utilizar Doubles en las pruebas.
 __Test Dummy__ muestra el uso de Dummies para cuando necesito pasar un parámetro en un método, pero no lo voy a utilizar en la prueba.
 __Test Stub__ muestra el uso de Stubs para cuando necesito pasar un parámetro en un método y necesito que me retorne un valor específico.
 
+## Notification Service ##
+Este ejemplo muestra como utilizar un Stub para simular distintas horas y poder hacer horas que dependan del DateTime de C#.
+
+## Ejemplo de diseño medediante Refactor ##
+Este ejemoplo muestra como se puede evolucionar un diseño utilizando tecnicas de Refactor y manteniendo bajo el acoplamiento entre el codigo de pruebas y el de producción.
