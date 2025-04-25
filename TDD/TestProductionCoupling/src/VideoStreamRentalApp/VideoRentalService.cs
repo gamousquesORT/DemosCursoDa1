@@ -1,10 +1,10 @@
 namespace VideoStreamRentalApp;
 
-public class Customer
+public class VideoRentalService
 {
     private List<Rental> _rentals = new List<Rental>();
     
-    public Customer()
+    public VideoRentalService()
     {
 
     }
