@@ -5,23 +5,38 @@ namespace TestsVideoStreamRentalApp;
 [TestClass]
 public class VideoStreamRentalTests
 {
+    
+    private static void AssertFeeAndFidelityPoints(Customer c, decimal expectedFee, int expectedFidelityPoints)
+    {
+        Assert.AreEqual(expectedFee, c.GetRentalFee());
+        Assert.AreEqual(expectedFidelityPoints, c.GetLoyaltyPoints());
+    }
+    
     [TestMethod]
     public void ShouldChargeAndGivePoints_GivenOneDayRental()
     {
         Customer c = new Customer();
         c.AddRental("Regular Movie" ,1);
-        Assert.AreEqual(1.5m, c.GetRentalFee());
-        Assert.AreEqual(1, c.GetLoyaltyPoints());
+        AssertFeeAndFidelityPoints(c, 1.5m, 1);
     }
-    
+
+
+
     [TestMethod]
     public void ShouldChargeButNotGivePoints_GivenThreeDayRental()
     {
         Customer c = new Customer();
         c.AddRental("Regular Movie" ,2);
-        Assert.AreEqual(1.5m, c.GetRentalFee());
+        AssertFeeAndFidelityPoints(c, 1.5m, 1);
+
         c.AddRental("Regular Movie" ,3);
-        Assert.AreEqual(1.5m, c.GetRentalFee());
-        Assert.AreEqual(1, c.GetLoyaltyPoints());
+        AssertFeeAndFidelityPoints(c, 1.5m, 1);
+    }
+    [TestMethod]
+    public void ShouldChargeAndGivePoints_GivenFourDaysRental()
+    {
+        Customer c = new Customer();
+        c.AddRental("Regular Movie" ,4);
+        AssertFeeAndFidelityPoints(c, 3.0m, 2);
     }
 }
