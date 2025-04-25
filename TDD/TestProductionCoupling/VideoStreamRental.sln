@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoStreamRentalApp", "src\VideoStreamRentalApp\VideoStreamRentalApp.csproj", "{E5988E7A-AD9A-4FD3-B72B-D5A38E854CA7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestsVideoStreamRentalApp", "tests\TestsVideoStreamRentalApp\TestsVideoStreamRentalApp.csproj", "{C9D6B2D4-6F6E-46BA-A4CF-674049DE7A2A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E5988E7A-AD9A-4FD3-B72B-D5A38E854CA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E5988E7A-AD9A-4FD3-B72B-D5A38E854CA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E5988E7A-AD9A-4FD3-B72B-D5A38E854CA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E5988E7A-AD9A-4FD3-B72B-D5A38E854CA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9D6B2D4-6F6E-46BA-A4CF-674049DE7A2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9D6B2D4-6F6E-46BA-A4CF-674049DE7A2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9D6B2D4-6F6E-46BA-A4CF-674049DE7A2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9D6B2D4-6F6E-46BA-A4CF-674049DE7A2A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
