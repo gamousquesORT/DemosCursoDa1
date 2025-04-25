@@ -7,7 +7,20 @@ public class Customer
     private const int LoyaltyPoints = 1;
     private int _daysRented;
     private string _movie;
+
+    enum MovieType
+    {
+        Regular,
+        Children,
+    }; 
     
+    private Dictionary<string, MovieType> _movieInfo = new Dictionary<string, MovieType>();
+
+    public Customer()
+    {
+        _movieInfo.Add("Regular Movie", MovieType.Regular);
+        _movieInfo.Add("Children Movie", MovieType.Children);       
+    }
     public void AddRental(string movie, int daysRented)
     {   
         _movie = movie;
@@ -15,7 +28,7 @@ public class Customer
     }
     public decimal GetRentalFee()
     {
-        if (_movie.Equals("Regular Movie"))
+        if (_movieInfo[_movie] == MovieType.Regular)
         {
             if (_daysRented > FreeRentalDays)
             {
