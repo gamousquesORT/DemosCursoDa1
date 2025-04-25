@@ -7,28 +7,20 @@ public class Customer
     private const int LoyaltyPoints = 1;
     private int _daysRented;
     private string _movie;
-
-    enum MovieType
-    {
-        Regular,
-        Children,
-    }; 
-    
-    private Dictionary<string, MovieType> _movieInfo = new Dictionary<string, MovieType>();
-
+    private VideoTypeRegistry _movieInfo = new VideoTypeRegistry();
     public Customer()
     {
-        _movieInfo.Add("Regular Movie", MovieType.Regular);
-        _movieInfo.Add("Children Movie", MovieType.Children);       
+  
     }
     public void AddRental(string movie, int daysRented)
     {   
         _movie = movie;
         _daysRented = daysRented;
     }
+
     public decimal GetRentalFee()
     {
-        if (_movieInfo[_movie] == MovieType.Regular)
+        if (_movieInfo.IsRegular(_movie))
         {
             if (_daysRented > FreeRentalDays)
             {
@@ -37,7 +29,7 @@ public class Customer
             return NormalRentalFee;       
         }
 
-        return 1;        
+        return 1*_daysRented;        
     }
 
     private decimal CalculateRentalFee()
@@ -47,11 +39,16 @@ public class Customer
 
     public int GetLoyaltyPoints()
     {
-        if (_daysRented > FreeRentalDays)
+        if (_movieInfo.IsRegular(_movie))
         {
-            return CalculateLoyaltyPoints();
+            if (_daysRented > FreeRentalDays)
+            {
+                return CalculateLoyaltyPoints();
+            }
+            return LoyaltyPoints;
         }
-        return LoyaltyPoints;
+
+        return 1;
     }
 
     private int CalculateLoyaltyPoints()

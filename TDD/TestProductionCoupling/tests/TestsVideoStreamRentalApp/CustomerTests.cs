@@ -54,4 +54,18 @@ public class VideoStreamRentalTests
         c.AddRental("Children Movie" ,1);
         AssertFeeAndFidelityPoints(1, 1);
     }
+
+    [TestMethod]
+    public void ShouldChargeFourDaysAndGiveOnePoint_GivenFourRentalOfChildrenMovie()
+    {
+        c.AddRental("Children Movie" ,4);
+        AssertFeeAndFidelityPoints(4, 1);       
+    }
+    [TestMethod]
+    public void ShouldChargeAndGivePoints_GivenRentingMoreThanOneMovie()
+    {
+        c.AddRental("Regular Movie" ,4); //$3 y 2p
+        c.AddRental("Children Movie" ,4); // $4 y 1p
+        AssertFeeAndFidelityPoints(7m, 3);
+    }
 }
