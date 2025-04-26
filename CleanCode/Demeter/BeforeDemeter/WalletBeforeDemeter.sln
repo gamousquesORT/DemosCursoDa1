@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletAppCoupledDesignProd", "WalletAppCoupledDesignProd\WalletAppCoupledDesignProd.csproj", "{03E8C2E1-9C84-4D8E-BB79-0D142177F172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletAppCoupledDedingTest", "WalletAppCoupledDedingTest\WalletAppCoupledDedingTest.csproj", "{DAC15ABA-9FB5-45B7-8BA1-FC25A1956E10}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{03E8C2E1-9C84-4D8E-BB79-0D142177F172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03E8C2E1-9C84-4D8E-BB79-0D142177F172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03E8C2E1-9C84-4D8E-BB79-0D142177F172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03E8C2E1-9C84-4D8E-BB79-0D142177F172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DAC15ABA-9FB5-45B7-8BA1-FC25A1956E10}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DAC15ABA-9FB5-45B7-8BA1-FC25A1956E10}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DAC15ABA-9FB5-45B7-8BA1-FC25A1956E10}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DAC15ABA-9FB5-45B7-8BA1-FC25A1956E10}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

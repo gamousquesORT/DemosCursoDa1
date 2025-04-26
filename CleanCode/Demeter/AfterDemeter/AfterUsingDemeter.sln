@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletAppProd", "RefactoredWithDemeterProd\WalletAppProd\WalletAppProd.csproj", "{51241CF8-99E7-43CF-ABB9-48CAB00FD52E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WalletAppTests", "RefactoredWithDemeterTests\WalletAppTests\WalletAppTests.csproj", "{53F5BEC8-B8A9-497C-9293-F27BA2EE0DA4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{51241CF8-99E7-43CF-ABB9-48CAB00FD52E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{51241CF8-99E7-43CF-ABB9-48CAB00FD52E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{51241CF8-99E7-43CF-ABB9-48CAB00FD52E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{51241CF8-99E7-43CF-ABB9-48CAB00FD52E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53F5BEC8-B8A9-497C-9293-F27BA2EE0DA4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53F5BEC8-B8A9-497C-9293-F27BA2EE0DA4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53F5BEC8-B8A9-497C-9293-F27BA2EE0DA4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53F5BEC8-B8A9-497C-9293-F27BA2EE0DA4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
