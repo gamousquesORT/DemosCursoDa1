@@ -21,7 +21,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\..\src\DeepModuleProd\DeepModuleProd.csproj" />
+      <ProjectReference Include="..\..\src\ShallowModuleProd\ShallowModuleProd.csproj" />
     </ItemGroup>
 
 </Project>

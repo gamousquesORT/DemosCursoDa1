@@ -1,4 +1,4 @@
-using DeepModuleProd.Domain;
+using ShallowModuleProd.Domain;
 namespace TestDeepModule;
 
 [TestClass]

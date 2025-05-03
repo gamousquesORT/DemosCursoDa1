@@ -1,4 +1,4 @@
-namespace DeepModuleProd.Domain;
+namespace ShallowModuleProd.Domain;
 
 public class ReportGenerator
 {
