@@ -14,22 +14,22 @@ public class ReportGenerator
     public List<string> GetReportLines()
     {
         List<string> formattedReport = new List<string>();
-        formattedReport.Add(GenerateSummary());
-        formattedReport.Add(FromatReport());
-        formattedReport.Add(GenerateFooter());
+        formattedReport.Add(GenerateSummaryAddingTimeStamp());
+        formattedReport.Add(FromatReportTuUpperCase());
+        formattedReport.Add(GenerateFooterWithNumberOfLines());
         return formattedReport;
     }
     
-    public string FromatReport()
+    private string FromatReportTuUpperCase()
     {
         return string.Join(",\n", _textLines.Select(x => x.ToUpper()));
     }
 
-    public string GenerateSummary()
+    private string GenerateSummaryAddingTimeStamp()
     {
         return "Report generated at: " + new DateTime(2025, 05, 03);
     }
-    public string GenerateFooter()
+    private string GenerateFooterWithNumberOfLines()
     {
         return "--- End of report ---:\n" + "Report Lines count = " + _textLines.Count;
     }
