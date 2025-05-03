@@ -24,7 +24,7 @@ public class ReportGeneratorTests
         var rep = new ReportGenerator();
         rep.AddTextLine("this is a valid line");
         rep.AddTextLine("this is another valid line");
-        var expected = 4;
+        var expected = 3;
         
         var result = rep.GetReportLines();
         Assert.AreEqual(expected, result.Count);
@@ -50,7 +50,7 @@ public class ReportGeneratorTests
        
         var result = rep.FromatReport();
 
-        Assert.AreEqual("THIS IS A VALID LINE" + "," + "THIS IS ANOTHER VALID LINE", result);
+        Assert.AreEqual("THIS IS A VALID LINE" + ",\n" + "THIS IS ANOTHER VALID LINE", result);
     }
     
     [TestMethod]

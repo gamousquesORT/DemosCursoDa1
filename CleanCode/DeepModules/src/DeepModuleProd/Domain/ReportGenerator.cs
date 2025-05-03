@@ -22,7 +22,7 @@ public class ReportGenerator
     
     public string FromatReport()
     {
-        return string.Join(",", _textLines.Select(x => x.ToUpper()));
+        return string.Join(",\n", _textLines.Select(x => x.ToUpper()));
     }
 
     public string GenerateSummary()
