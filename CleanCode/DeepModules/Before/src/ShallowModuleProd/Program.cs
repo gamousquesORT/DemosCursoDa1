@@ -1,20 +1,21 @@
 ﻿using ShallowModuleProd.Domain;
 
-var reportGenerator = new ReportGenerator();
-AddReportLines(reportGenerator);
+var reportGenerator = new ReportGenerator(new DateTimeProd());
+var text = new List<string>();
+AddReportLines(text);
 
-PrintReportLines(reportGenerator);
+PrintReportLines(reportGenerator, text);
 
-void AddReportLines(ReportGenerator reportGenerator1)
+void AddReportLines(List<string> text)
 {
-    reportGenerator1.AddTextLine("line1");
-    reportGenerator1.AddTextLine("line2");
-    reportGenerator1.AddTextLine("line3");
+    text.Add("line1");
+    text.Add("line2");
+    text.Add("line3");
 }
 
-void PrintReportLines(ReportGenerator reportGenerator2)
+void PrintReportLines(ReportGenerator reportGenerator, List<string> text)
 {
-    foreach (var line in reportGenerator2.GetReportLines())
+    foreach (var line in reportGenerator.GetReportLines(text))
         Console.WriteLine(line);
 }
     

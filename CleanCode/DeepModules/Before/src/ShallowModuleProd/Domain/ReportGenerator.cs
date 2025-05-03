@@ -1,36 +1,33 @@
+using ShallowModuleProd.Interfaces;
 namespace ShallowModuleProd.Domain;
 
 public class ReportGenerator
 {
-    private List<string> _textLines = new List<string>();
-    
-    public void AddTextLine(string textLine)
+    private IDate _date;
+    public ReportGenerator(IDate date)
     {
-        if (string.IsNullOrEmpty(textLine))
-            throw new ArgumentException("Text line cannot be empty");
-        _textLines.Add(textLine);
+        _date = date;
     }
-    
-    public List<string> GetReportLines()
+    public List<string> GetReportLines(List<string> text)
     {
         List<string> formattedReport = new List<string>();
-        formattedReport.Add(GenerateSummaryAddingTimeStamp());
-        formattedReport.Add(FromatReportTuUpperCase());
-        formattedReport.Add(GenerateFooterWithNumberOfLines());
+        formattedReport.Add(GenerateSummaryAddingTimeStamp(text));
+        formattedReport.Add(FromatReportTuUpperCase(text));
+        formattedReport.Add(GenerateFooterWithNumberOfLines(text));
         return formattedReport;
     }
     
-    private string FromatReportTuUpperCase()
+    public string FromatReportTuUpperCase(List<string> text)
     {
-        return string.Join(",\n", _textLines.Select(x => x.ToUpper()));
+        return string.Join(",\n", text.Select(x => x.ToUpper()));
     }
 
-    private string GenerateSummaryAddingTimeStamp()
+    private string GenerateSummaryAddingTimeStamp(List<string> text)
     {
-        return "Report generated at: " + new DateTime(2025, 05, 03);
+        return "Report generated at: " + _date.Now();
     }
-    private string GenerateFooterWithNumberOfLines()
+    private string GenerateFooterWithNumberOfLines(List<string> text)
     {
-        return "--- End of report ---:\n" + "Report Lines count = " + _textLines.Count;
+        return "--- End of report ---:\n" + "Report Lines count = " + text.Count;
     }
 }

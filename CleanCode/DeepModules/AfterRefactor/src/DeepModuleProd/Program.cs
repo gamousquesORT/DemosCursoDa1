@@ -1,6 +1,8 @@
 ﻿using DeepModuleProd.Domain;
+using DeepModuleProd.Interfaces;
 
-var reportGenerator = new ReportGenerator();
+IDate date = new DateTimeProd();
+var reportGenerator = new ReportGenerator(date);
 AddReportLines(reportGenerator);
 PrintReport(reportGenerator);
 
