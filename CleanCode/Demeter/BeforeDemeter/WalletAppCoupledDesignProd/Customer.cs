@@ -8,8 +8,9 @@ public class Customer
     {
         _wallet = new Wallet();
     }
-    public string FirstName { get; set; }
-    public string LastName { get; set; }
+
+    public string FirstName { get; set; } = "";
+    public string LastName { get; set; } = "";
     public Wallet Wallet
     {
         get { return _wallet; }

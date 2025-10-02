@@ -2,8 +2,8 @@
 
 using RefactoredWithDemeter;
 
-Commerce commerce = new Commerce();
+Store store = new Store();
 Customer customer = new Customer();
 customer.AddMoney(100);
-commerce.Checkout(customer, 110);
+store.Checkout(customer, 110);
 

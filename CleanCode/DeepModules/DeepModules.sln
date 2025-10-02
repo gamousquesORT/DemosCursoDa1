@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShallowModuleProd", "Before\src\ShallowModuleProd\ShallowModuleProd.csproj", "{5AD02588-46E6-4A8F-8F37-3C64D2FFBD5C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DeepModuleProd", "AfterRefactor\src\DeepModuleProd\DeepModuleProd.csproj", "{DB487715-DBF2-46B5-872C-71CEAB877E3A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5AD02588-46E6-4A8F-8F37-3C64D2FFBD5C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AD02588-46E6-4A8F-8F37-3C64D2FFBD5C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AD02588-46E6-4A8F-8F37-3C64D2FFBD5C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AD02588-46E6-4A8F-8F37-3C64D2FFBD5C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB487715-DBF2-46B5-872C-71CEAB877E3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB487715-DBF2-46B5-872C-71CEAB877E3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB487715-DBF2-46B5-872C-71CEAB877E3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB487715-DBF2-46B5-872C-71CEAB877E3A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

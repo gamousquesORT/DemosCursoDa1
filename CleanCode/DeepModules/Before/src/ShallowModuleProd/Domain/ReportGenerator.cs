@@ -17,14 +17,14 @@ public class ReportGenerator
         return formattedReport;
     }
     
-    public string FromatReportTuUpperCase(List<string> text)
-    {
-        return string.Join(",\n", text.Select(x => x.ToUpper()));
-    }
-
     private string GenerateSummaryAddingTimeStamp(List<string> text)
     {
         return "Report generated at: " + _date.Now();
+    }
+    
+    public string FromatReportTuUpperCase(List<string> text)
+    {
+        return string.Join(",\n", text.Select(x => x.ToUpper()));
     }
     private string GenerateFooterWithNumberOfLines(List<string> text)
     {
