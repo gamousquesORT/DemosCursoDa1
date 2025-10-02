@@ -1,6 +1,6 @@
 namespace RefactoredWithDemeter;
 
-public class Commerce
+public class Store
 {
     public void Checkout(Customer customer, decimal amount)
     {

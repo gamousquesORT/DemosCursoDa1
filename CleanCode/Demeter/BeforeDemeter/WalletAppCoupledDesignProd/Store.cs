@@ -2,13 +2,12 @@ namespace WalletAppDomain;
 
 public class Store
 {
-    public bool Checkout(Customer customer, decimal amount)
+    public void Checkout(Customer customer, decimal amount)
     {
         Wallet wallet = customer.Wallet;
         if (wallet.Money >= amount)
         {
             wallet.DrawMoney(amount);
-            return true;
             Console.WriteLine("Purchase completed");
         }
         else
