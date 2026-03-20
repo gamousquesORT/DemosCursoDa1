@@ -22,12 +22,13 @@ public class Docente : PersonaUniversidad
     // Probar el método sin la palabra clave override y ver el comportamiento
     public override string ObtenerDatos()
     {
-        return string.Format($"Numero:{this.Numero} - Nombre {this.Nombre} - Clase Docente: {this.GetType()}");
+        return string.Format($"Numero:{this.Numero} - Nombre {this.Nombre} - Método ObtenerDatos de Docente y Objeto de Clase: {this.GetType()}");
+
     }
     
     public override string ToString()
     {
-        return string.Format($"Numero:{this.Numero} Nombre {this.Nombre} - Clase Docente: {this.GetType()}");
+        return string.Format($"Numero:{this.Numero} - Nombre {this.Nombre} - Método ToString de Docente y Objeto de Clase: {this.GetType()}");
     }
 
 }

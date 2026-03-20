@@ -33,11 +33,12 @@ public class PersonaUniversidad
     // Probar el método sin la palabra clave virtual y ver el comportamiento
     public virtual string ObtenerDatos()
     {
-        return string.Format($"Numero:{this._numeroPersona} - Nombre {this._nombreApellido} - Clase PersonaUniversidad: {this.GetType()}");
+        return string.Format($"Numero:{this._numeroPersona} - Nombre {this._nombreApellido} - Método ObtenerDatos de PersonaUniversidad y Objeto de Clase: {this.GetType()}");
     }
     
     public override string ToString()
     {
-        return string.Format($"Numero:{this._numeroPersona} Nombre {this._nombreApellido} - PersonaUniversidad: {this.GetType()}");
+        return string.Format($"Numero:{this._numeroPersona} - Nombre {this._nombreApellido} - Método ToString de PersonaUniversidad y Objeto de Clase: {this.GetType()}");
+
     }
 }

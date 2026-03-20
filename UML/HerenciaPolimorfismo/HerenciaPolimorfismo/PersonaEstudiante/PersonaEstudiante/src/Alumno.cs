@@ -2,22 +2,24 @@ namespace RecorrerPolimorficamente;
 
 public class Alumno : PersonaUniversidad
 {
-    private List<Carrera> _carreras;
+    private Carrera _carrera;
     
     public Alumno()
     {
-        _carreras = new List<Carrera>();
+        _carrera = new Carrera();
     }
     
     // Notar el base para invocar el constructor de la clase base
     public Alumno(string nombreApellido, int numeroPersona) : base(nombreApellido, numeroPersona)
     {
-        this._carreras = new List<Carrera>();
+        this._carrera = new Carrera();
     }
+    
+    public Carrera Carrera =>  _carrera;
     
     public override string ToString()
     {
-        return string.Format($"Numero:{this.Numero} Nombre {this.Nombre} - Clase Alumno: {this.GetType()}");
+        return string.Format($"Numero:{this.Numero} - Nombre {this.Nombre} - Método ObtenerDatos de Alumno y Objeto de Clase: {this.GetType()}");
     }
 
     
