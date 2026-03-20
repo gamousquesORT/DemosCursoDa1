@@ -12,7 +12,13 @@ public class Cellphone
         IMEI = "IMEI invalido";
         _owner = null;   
     }
-    
+ 
+    public Cellphone(string imei, string cellphoneNumber, Person owner )
+    {
+        CellphoneNumber = cellphoneNumber;
+        IMEI = imei;
+        _owner = owner;   
+    }
     public Person? Owner
     {
         get => _owner;

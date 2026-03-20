@@ -32,7 +32,7 @@ public class Person
         if (_numberOfCellsphones >= MaxNumberOfDevices)
             throw new ArgumentOutOfRangeException(nameof(_numberOfCellsphones), "Only two devices are supported.");
 
-        var newCellphone = new Cellphone() { IMEI = imei, CellphoneNumber = cellphoneNumber, Owner = this };
+        var newCellphone = new Cellphone(imei, cellphoneNumber, this );
         _cellphones[_numberOfCellsphones++] = newCellphone;
         return newCellphone;
     }
