@@ -5,30 +5,69 @@
         Buzz si el número es divisible por 5
         FizzBuzz si el número es divisible por 3 y 5
         Si el número no es divisible por 3 ni 5 retorna el número
-        Si el número es negativo  retorna un error
- *
- * Definir tests
- *      1. Se llama a la funcion para ver que no exista la clase
- *      2. Se pasa un número divisible por 3 y retorna Fizz
- *         Se pasa un 3 => Fizz
- *         Se pasa 6 y retorna Fizz
- *      3. Se pasa un número divisible por 5 y retorna Buzz
- *          Se pasa un 5 => Buzz
- *          Se pasa un 10 => Buzz
- *      4. se pasa un numero divisble por 3 y 5 y retorna FizzBuzz
- *          se pasa 15 => FizzBuzz
- *          se pasa 30 => FizzBuzz
- *      5. Se pasa un número no divisble por 3 ni por 5 retorna el número como string
- *          se pasa 1 => 1
- *          se pasa 32 => 13
- *      6. se pasa un número negativo y retorna ArgumentException
- *      7. se pasa un número mayor que 100 retorna ArgumentException
- *
- */ 
+        Si el número es negativo  retorna una excepcion de argumento invalido
+        Si el número es mayor que 100 retorn una una excepcion de argumento invalido 
+
 
 [TestClass]
-public class FizzBuzzTests
-{
+public class TestFizzBuzz
+{ 
 
- 
+   private FizzBuzz _fizzBuzz = new FizzBuzz();
+
+   // --- Divisible por 3 únicamente → Fizz ---
+
+   [TestMethod]
+   public void WhenNumberIsDivisibleByThreeOnlyThenReturnFizz()
+   {
+       var result = _fizzFuzz.Convert(3);
+       Assert.AreEqual("Fizz", result);
+   }
+
+   // --- Divisible por 5 únicamente → Buzz ---
+
+   [TestMethod]
+   public void WhenNumberIsDivisibleByFiveOnlyThenReturnBuzz()
+   {
+       var result = _fizzFuzz.Convert(5);
+       Assert.AreEqual("Buzz", result);
+   }
+
+   // --- Divisible por 3 y 5 → FizzBuzz ---
+
+   [TestMethod]
+   public void WhenNumberIsDivisibleByThreeAndFiveThenReturnFizzBuzz()
+   {
+       var result = _fizzFuzz.Convert(15);
+       Assert.AreEqual("FizzBuzz", result);
+   }
+
+   // --- No divisible por 3 ni 5 → retorna el número ---
+
+   [TestMethod]
+   public void WhenNumberIsNotDivisibleByThreeOrFiveThenReturnNumber()
+   {
+       var result = _fizzFuzz.Convert(7);
+       Assert.AreEqual("7", result);
+   }
+
+   // --- Número negativo → lanza error ---
+
+   [TestMethod]
+   [ExpectedException(typeof(ArgumentException))]
+   public void WhenNumberIsNegativeThenThrowArgumentException()
+   {
+       _fizzFuzz.Convert(-1);
+   }
+
+   [TestMethod]
+   [ExpectedException(typeof(ArgumentException))]
+   public void WhenNumberIsGreaterThanOneHundredThenThrowArgumentException()
+   {
+       _fizzFuzz.Convert(101);
+   }
+
 }
+*/  
+   
+   
