@@ -1,0 +1,17 @@
+ * Reglas kata FizzBuzz
+ * Crear un método que dado un número retorne:
+        Fizz si el número es divisible por 3
+        Buzz si el número es divisible por 5
+        FizzBuzz si el número es divisible por 3 y 5
+        Si el número no es divisible por 3 ni 5 retorna el número
+        Si el número es negativo  retorna un error
+        Si el número es mayor a 100 retorna un error
+        
+        
+       Lees las instrucciones descriptas antes sobre las reglas del kata FizzFuzz.
+       Crea un archivo llamado TestFizzBuzz.cs en el proyecto 
+       escribe todos los test unitarios necesarios para lograr una cobertura de sentencias del 100 % utilizando el framework MSTest.
+       los nombres de los test deben seguir el formato When[Condition]Then[ExpectedResult]
+       No utilizar data driven test
+       
+       
