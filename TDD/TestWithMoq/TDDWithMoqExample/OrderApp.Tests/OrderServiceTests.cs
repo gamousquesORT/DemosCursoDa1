@@ -1,7 +1,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using Moq;
+using OrderApp.BusinessClasses;
 using OrderApp.Interfaces;
-using OrderApp.Models;
 using OrderApp.Services;
 
 namespace OrderApp.Tests;
@@ -24,7 +24,8 @@ public class OrderServiceTests
 
     // ── Test 1: Setup + Returns ───────────────────────────────────────────────
     // Moq concept: mock.Setup(x => x.Method()).Returns(value)
-    //   → controls what the mock returns when called
+    //   → the repository mock returns a real Inventory object;
+    //     HasStock runs as real business logic on that object
     [TestMethod]
     public void WhenStockIsAvailable_ThenReturnsSuccess()
     {
@@ -32,8 +33,8 @@ public class OrderServiceTests
         var order = new Order { Id = 1, CustomerEmail = "alice@example.com", ProductId = "P1", Quantity = 2 };
 
         _inventoryMock
-            .Setup(r => r.HasStock("P1", 2))
-            .Returns(true);                     // <-- stub: always say "yes, stock exists"
+            .Setup(r => r.GetByProductId("P1"))
+            .Returns(new Inventory { ProductId = "P1", AvailableQuantity = 10 });   // 10 >= 2 → stock ok
 
         // Act
         var result = _sut.PlaceOrder(order);
@@ -52,8 +53,8 @@ public class OrderServiceTests
         var order = new Order { Id = 42, CustomerEmail = "alice@example.com", ProductId = "P1", Quantity = 2 };
 
         _inventoryMock
-            .Setup(r => r.HasStock("P1", 2))
-            .Returns(true);
+            .Setup(r => r.GetByProductId("P1"))
+            .Returns(new Inventory { ProductId = "P1", AvailableQuantity = 10 });
 
         // Act
         _sut.PlaceOrder(order);
@@ -74,8 +75,8 @@ public class OrderServiceTests
         var order = new Order { Id = 7, CustomerEmail = "bob@example.com", ProductId = "P2", Quantity = 5 };
 
         _inventoryMock
-            .Setup(r => r.HasStock("P2", 5))
-            .Returns(false);                    // <-- stub: no stock
+            .Setup(r => r.GetByProductId("P2"))
+            .Returns(new Inventory { ProductId = "P2", AvailableQuantity = 2 });    // 2 < 5 → no stock
 
         // Act
         _sut.PlaceOrder(order);
@@ -96,8 +97,8 @@ public class OrderServiceTests
         var order = new Order { Id = 3, CustomerEmail = "carol@example.com", ProductId = "P3", Quantity = 10 };
 
         _inventoryMock
-            .Setup(r => r.HasStock("P3", 10))
-            .Returns(false);
+            .Setup(r => r.GetByProductId("P3"))
+            .Returns(new Inventory { ProductId = "P3", AvailableQuantity = 0 });    // 0 < 10 → no stock
 
         // Act
         var result = _sut.PlaceOrder(order);

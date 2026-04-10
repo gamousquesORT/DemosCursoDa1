@@ -1,5 +1,5 @@
+using OrderApp.BusinessClasses;
 using OrderApp.Interfaces;
-using OrderApp.Models;
 
 namespace OrderApp.Services;
 
@@ -16,7 +16,9 @@ public class OrderService
 
     public OrderResult PlaceOrder(Order order)
     {
-        if (!_inventory.HasStock(order.ProductId, order.Quantity))
+        var inventory = _inventory.GetByProductId(order.ProductId);
+
+        if (!inventory.HasStock(order.Quantity))
             return OrderResult.InsufficientStock;
 
         _emailService.SendConfirmation(order.CustomerEmail, order.Id);

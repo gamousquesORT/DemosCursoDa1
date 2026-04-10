@@ -1,6 +1,8 @@
+using OrderApp.BusinessClasses;
+
 namespace OrderApp.Interfaces;
 
 public interface IInventoryRepository
 {
-    bool HasStock(string productId, int quantity);
+    Inventory GetByProductId(string productId);
 }

@@ -1,4 +1,4 @@
-namespace OrderApp.Models;
+namespace OrderApp.BusinessClasses;
 
 public class Order
 {
