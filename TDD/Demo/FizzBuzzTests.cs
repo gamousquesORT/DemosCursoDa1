@@ -3,7 +3,7 @@
  * Crear una que tenga un método que dado un número retorne:
         Fizz si el número es divisible por 3
         Buzz si el número es divisible por 5
-        FizzBuzz si el número es divisible por 3 y 5
+        FizzBuzzApp si el número es divisible por 3 y 5
         Si el número no es divisible por 3 ni 5 retorna el número
         Si el número es negativo  retorna una excepcion de argumento invalido
         Si el número es mayor que 100 retorn una una excepcion de argumento invalido 
@@ -13,7 +13,7 @@
 public class TestFizzBuzz
 { 
 
-   private FizzBuzz _fizzBuzz = new FizzBuzz();
+   private FizzBuzzApp _fizzBuzz = new FizzBuzzApp();
 
    // --- Divisible por 3 únicamente → Fizz ---
 
@@ -33,13 +33,13 @@ public class TestFizzBuzz
        Assert.AreEqual("Buzz", result);
    }
 
-   // --- Divisible por 3 y 5 → FizzBuzz ---
+   // --- Divisible por 3 y 5 → FizzBuzzApp ---
 
    [TestMethod]
    public void WhenNumberIsDivisibleByThreeAndFiveThenReturnFizzBuzz()
    {
        var result = _fizzFuzz.Convert(15);
-       Assert.AreEqual("FizzBuzz", result);
+       Assert.AreEqual("FizzBuzzApp", result);
    }
 
    // --- No divisible por 3 ni 5 → retorna el número ---
