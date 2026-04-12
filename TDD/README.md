@@ -18,3 +18,5 @@ Este ejemplo muestra como utilizar un Stub para simular distintas horas y poder 
 
 ## Ejemplo de diseño medediante Refactor ##
 Este ejemoplo muestra como se puede evolucionar un diseño utilizando tecnicas de Refactor y manteniendo bajo el acoplamiento entre el codigo de pruebas y el de producción.
+
+Falta actualizar
