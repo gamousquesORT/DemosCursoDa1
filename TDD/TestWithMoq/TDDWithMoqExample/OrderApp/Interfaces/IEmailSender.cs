@@ -1,6 +1,6 @@
 namespace OrderApp.Interfaces;
 
-public interface IEmailService
+public interface IEmailSender
 {
     void SendConfirmation(string customerEmail, int orderId);
 }

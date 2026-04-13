@@ -5,23 +5,23 @@ namespace OrderApp.Services;
 
 public class OrderService
 {
-    private readonly IInventoryRepository _inventory;
-    private readonly IEmailService _emailService;
+    private readonly IProductRepository _product;
+    private readonly IEmailSender _emailSender;
 
-    public OrderService(IInventoryRepository inventory, IEmailService emailService)
+    public OrderService(IProductRepository product, IEmailSender emailSender)
     {
-        _inventory = inventory;
-        _emailService = emailService;
+        _product = product;
+        _emailSender = emailSender;
     }
 
-    public OrderResult PlaceOrder(Order order)
+    public int PlaceOrder(Order order)
     {
-        var inventory = _inventory.GetByProductId(order.ProductId);
+        var product = _product.GetByProductId(order.ProductId);
 
-        if (!inventory.HasStock(order.Quantity))
-            return OrderResult.InsufficientStock;
-
-        _emailService.SendConfirmation(order.CustomerEmail, order.Id);
-        return OrderResult.Success;
+        if (!product.HasStock(order.Quantity))
+            throw new ArgumentException("Not enough stock");
+        product.AvailableQuantity -= order.Quantity;
+        _emailSender.SendConfirmation(order.CustomerEmail, order.Id);
+        return product.AvailableQuantity;
     }
 }
