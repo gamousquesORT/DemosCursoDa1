@@ -1,6 +1,6 @@
 namespace OrderApp.BusinessClasses;
 
-public class Inventory
+public class Product
 {
     public string ProductId { get; set; } = string.Empty;
     public int AvailableQuantity { get; set; }
