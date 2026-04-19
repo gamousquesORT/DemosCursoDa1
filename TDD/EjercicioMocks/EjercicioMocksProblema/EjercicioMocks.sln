@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csproj", "{7D52E04D-6DE7-4DA9-BF76-3893D8717102}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountServiceTests", "DiscountServiceTests\DiscountServiceTests.csproj", "{F3CB4C45-6021-4ADF-B86E-9C898413105E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7D52E04D-6DE7-4DA9-BF76-3893D8717102}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D52E04D-6DE7-4DA9-BF76-3893D8717102}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D52E04D-6DE7-4DA9-BF76-3893D8717102}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D52E04D-6DE7-4DA9-BF76-3893D8717102}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3CB4C45-6021-4ADF-B86E-9C898413105E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3CB4C45-6021-4ADF-B86E-9C898413105E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3CB4C45-6021-4ADF-B86E-9C898413105E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3CB4C45-6021-4ADF-B86E-9C898413105E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
