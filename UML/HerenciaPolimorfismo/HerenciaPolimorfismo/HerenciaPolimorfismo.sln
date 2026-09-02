@@ -18,6 +18,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonaEstudianteEj", "Pers
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PolimorfismoMetodos", "PolimorfismoMetodos\PolimorfismoMetodos.csproj", "{3A0BA890-3A54-4FBE-8A2A-7E6695494092}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonDevices", "..\..\..\..\codigoEjercicio\2.16_PersonDevices\PersonDevices.csproj", "{64AA5407-305D-4AB1-A0E2-23FD877E54D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PersonDevicesToo", "..\..\..\..\codigoEjercicio\2.16_PersonDevicesToo\2.16_PersonDevicesToo\PersonDevicesToo.csproj", "{6A0528CD-725D-4C0E-9077-B82A56C9FCBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -60,5 +64,13 @@ Global
 		{3A0BA890-3A54-4FBE-8A2A-7E6695494092}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3A0BA890-3A54-4FBE-8A2A-7E6695494092}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3A0BA890-3A54-4FBE-8A2A-7E6695494092}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64AA5407-305D-4AB1-A0E2-23FD877E54D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64AA5407-305D-4AB1-A0E2-23FD877E54D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64AA5407-305D-4AB1-A0E2-23FD877E54D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64AA5407-305D-4AB1-A0E2-23FD877E54D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6A0528CD-725D-4C0E-9077-B82A56C9FCBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6A0528CD-725D-4C0E-9077-B82A56C9FCBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6A0528CD-725D-4C0E-9077-B82A56C9FCBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6A0528CD-725D-4C0E-9077-B82A56C9FCBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
