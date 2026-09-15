@@ -2,12 +2,6 @@ using System.Collections.Generic;
 
 namespace DA2026.Tests
 {
-    // Implementación de referencia que hace pasar
-    // PersonaDireccionesTests_OcultamientoInfo.cs
-    //
-    // Ocultamiento de información: la lista interna es privada y nunca
-    // se devuelve ni se expone; toda interacción es por comportamiento.
-
     public class Direccion
     {
         public string Calle { get; }
@@ -34,7 +28,7 @@ namespace DA2026.Tests
 
     public class Persona
     {
-        private readonly List<Direccion> direcciones = new List<Direccion>();
+        private readonly List<Direccion> _direcciones = new List<Direccion>();
 
         public string Nombre { get; }
 
@@ -43,29 +37,29 @@ namespace DA2026.Tests
             Nombre = nombre;
         }
         
-        public List<Direccion> Direcciones => direcciones;
+        public List<Direccion> Direcciones => _direcciones;
 
         public void AgregarDireccion(Direccion direccion)
         {
             if (!TieneDireccion(direccion))
             {
-                direcciones.Add(direccion);
+                _direcciones.Add(direccion);
             }
         }
 
         public void QuitarDireccion(Direccion direccion)
         {
-            direcciones.Remove(direccion);
+            _direcciones.Remove(direccion);
         }
 
         public bool TieneDireccion(Direccion direccion)
         {
-            return direcciones.Contains(direccion);
+            return _direcciones.Contains(direccion);
         }
 
         public int CantidadDeDirecciones()
         {
-            return direcciones.Count;
+            return _direcciones.Count;
         }
     }
 }
