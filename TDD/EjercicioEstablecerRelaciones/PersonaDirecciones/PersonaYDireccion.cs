@@ -57,9 +57,5 @@ namespace DA2026.Tests
             return _direcciones.Contains(direccion);
         }
 
-        public int CantidadDeDirecciones()
-        {
-            return _direcciones.Count;
-        }
     }
 }
