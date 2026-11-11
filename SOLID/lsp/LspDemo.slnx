@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="LspDemo.Console/LspDemo.Console.csproj" />
+  <Project Path="LspDemo.FixedHierarchy/LspDemo.FixedHierarchy.csproj" />
+  <Project Path="LspDemo.FixedInterface/LspDemo.FixedInterface.csproj" />
+</Solution>
